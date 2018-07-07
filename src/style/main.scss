@@ -1,3 +1,14 @@
+@mixin button {
+        height: 50px;
+        width: 300px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+        color: white;
+        font-family: 'Monserrat';
+        font-size: 22px;
+        text-align: center;
+}
+
 .home {
     position: relative;
     background-color: rgba(207, 207, 207, .06);
@@ -70,6 +81,24 @@
 
         justify-items: center;
         align-items: center;
+    }
+    
+    button:focus {
+        outline: none;
+    }
+    
+    button {
+        justify-self: center;
+    }
+    
+    &__generate {
+        background-color: #00cb79;
+        @include button;
+    }
+    
+    &__clear {
+        background-color: #45b0e5;
+        @include button;
     }
 }
 
